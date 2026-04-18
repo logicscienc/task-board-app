@@ -164,12 +164,10 @@ Architecture Diagram
 ```mermaid
 graph TD
 
-%% ================= FRONTEND =================
-A[React Frontend<br/>Dashboard • Projects • Tasks • Task Detail] --> B[UI Layer<br/>Modals • Toast • Routing • State Management]
+A[React Frontend Dashboard Projects Tasks TaskDetail] --> B[UI Layer Modals Toast Routing State]
 
-B --> C[API Layer (Axios / Services)]
+B --> C[API Layer Axios Services]
 
-%% ================= BACKEND =================
 C --> D[ASP.NET Core Web API]
 
 D --> D1[Projects Controller]
@@ -177,7 +175,6 @@ D --> D2[Tasks Controller]
 D --> D3[Comments Controller]
 D --> D4[Dashboard Controller]
 
-%% ================= SERVICE LAYER =================
 D1 --> E[Service Layer]
 D2 --> E
 D3 --> E
@@ -186,10 +183,9 @@ D4 --> E
 E --> F1[Business Logic]
 E --> F2[Validation Rules]
 E --> F3[Error Handling]
-E --> F4[Filtering / Sorting / Pagination Logic]
+E --> F4[Filtering Sorting Pagination]
 
-%% ================= DATA LAYER =================
-F1 --> G[Entity Framework Core (DbContext)]
+F1 --> G[Entity Framework Core DbContext]
 
 G --> H1[Project Entity]
 G --> H2[Task Entity]
