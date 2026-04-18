@@ -164,36 +164,37 @@ Architecture Diagram
 ```mermaid
 graph TD
 
-A[React Frontend Dashboard Projects Tasks TaskDetail] --> B[UI Layer Modals Toast Routing State]
-
-B --> C[API Layer Axios Services]
-
-C --> D[ASP.NET Core Web API]
+A[React Frontend] --> B[UI Layer]
+B --> C[API Layer]
+C --> D[ASP.NET Core API]
+D --> E[Service Layer]
+E --> F[EF Core DbContext]
+F --> G[SQLite Database]
 
 D --> D1[Projects Controller]
 D --> D2[Tasks Controller]
 D --> D3[Comments Controller]
 D --> D4[Dashboard Controller]
 
-D1 --> E[Service Layer]
-D2 --> E
-D3 --> E
-D4 --> E
+E --> E1[Business Logic]
+E --> E2[Validation]
+E --> E3[Error Handling]
+E --> E4[Filtering & Pagination]
 
-E --> F1[Business Logic]
-E --> F2[Validation Rules]
-E --> F3[Error Handling]
-E --> F4[Filtering Sorting Pagination]
+F --> F1[Project Entity]
+F --> F2[Task Entity]
+F --> F3[Comment Entity]
+F --> F4[Migrations]
 
-F1 --> G[Entity Framework Core DbContext]
+%% ===== STYLES =====
+classDef frontend fill:#E3F2FD,stroke:#1E88E5,color:#000;
+classDef backend fill:#E8F5E9,stroke:#43A047,color:#000;
+classDef service fill:#FFF3E0,stroke:#FB8C00,color:#000;
+classDef db fill:#F3E5F5,stroke:#8E24AA,color:#000;
 
-G --> H1[Project Entity]
-G --> H2[Task Entity]
-G --> H3[Comment Entity]
-G --> H4[Migrations]
-
-H1 --> I[SQLite Database]
-H2 --> I
-H3 --> I
-H4 --> I
+class A,B frontend;
+class C,D,D1,D2,D3,D4 backend;
+class E,E1,E2,E3,E4 service;
+class F,F1,F2,F3,F4 db;
+class G db;
 ```
