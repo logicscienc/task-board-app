@@ -137,10 +137,15 @@ Modal-based UI for create operations
 
 ![Dashboard Screen](task-board-ui/src/assets/Dashboard.png)
 
+### 📁 Projects
+![Projects](task-board-ui/src/assets/Projects.png)
 
-Projects Page
+### ➕ Create Project
+![Create Project](task-board-ui/src/assets/createProject.png)
 
-Task Board
+### 📝 Create Task
+![Create Task](task-board-ui/src/assets/CreateTask.png)
+
 
 🧠 What I Learned
 Full-stack architecture separation
